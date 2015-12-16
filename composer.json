@@ -1,0 +1,45 @@
+{
+    "name": "IngWARP/folder",
+    "description": "Handling files on a server. Usually the Public folder",
+    "keywords": [
+        "IngWARP",
+        "folder"
+    ],
+    "homepage": "https://github.com/IngWARP/folder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ingvar Kreft",
+            "email": "ingvar@hedren.nu",
+            "homepage": "http://www.hedren.nu",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "IngWARP\\folder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IngWARP\\folder\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
