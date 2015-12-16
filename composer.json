@@ -1,11 +1,11 @@
 {
-    "name": "IngWARP/folder",
+    "name": "ingwarp/folder",
     "description": "Handling files on a server. Usually the Public folder",
     "keywords": [
         "IngWARP",
         "folder"
     ],
-    "homepage": "https://github.com/IngWARP/folder",
+    "homepage": "https://github.com/IngWARP/Folder",
     "license": "MIT",
     "authors": [
         {
