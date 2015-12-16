@@ -19,7 +19,7 @@ class FolderServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/resources/views', 'folder');
         $this->publishes([
-            __DIR__.'Http/resources/views' => base_path('resources/views')
+            __DIR__.'/resources/views' => base_path('resources/views')
         ]);
     }
 
