@@ -1,4 +1,4 @@
-# folder
+# Folder
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -15,7 +15,7 @@ PSRs you support to avoid any confusion with users and contributors.
 Via Composer
 
 ``` bash
-$ composer require IngWARP/folder
+$ composer require IngWARP/Folder
 ```
 
 ## Usage
