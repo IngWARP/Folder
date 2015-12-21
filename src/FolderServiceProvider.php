@@ -46,6 +46,7 @@ class FolderServiceProvider extends ServiceProvider
         {
             require __DIR__.'/Http/routes.php';
         });
+            //dd($router);
     }
     /**
      * Register any package services.

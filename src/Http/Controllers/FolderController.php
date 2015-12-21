@@ -18,8 +18,8 @@ class FolderController extends Controller
 
     public function index()
     {
-        //return view('folder::folder');
-        return 'hej';
+        return view('folder::folder');
+        //return 'hej';
     }
 
 }
