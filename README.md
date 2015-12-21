@@ -17,6 +17,11 @@ Via Composer
 ``` bash
 $ composer require IngWARP/Folder
 ```
+In config/app add
+
+``` php
+IngWARP\folder\FolderServiceProvider::class,
+```
 
 ## Usage
 
