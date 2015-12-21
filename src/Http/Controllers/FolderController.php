@@ -1,4 +1,4 @@
-<?php namespace IngWARP\Folder\Http;
+<?php namespace IngWARP\Folder\Http\Controllers;
 
     /**
      * Created by PhpStorm.
