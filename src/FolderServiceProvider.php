@@ -42,7 +42,7 @@ class FolderServiceProvider extends ServiceProvider
      */
     public function setupRoutes(Router $router)
     {
-        $router->group(['namespace' => 'IngWARP\Folder\Http\Controllers'], function($router)
+        $router->group(['namespace' => 'IngWARP\folder\Http\Controllers'], function($router)
         {
             require __DIR__.'/Http/routes.php';
         });
