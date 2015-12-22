@@ -19,7 +19,26 @@ class FolderController extends Controller
     public function index()
     {
         return view('folder::folder');
-        //return 'hej';
+    }
+
+    public function files()
+    {
+        $filesystem = new Filesystem();
+        $files = $filesystem->allFiles(public_path().'/images');
+        foreach ($files as $file) {
+            $return[$file->getRelativePath()][] = $filesystem->name($file->getRelativePathname());
+        }
+        return $return;
+    }
+
+    public function dirs()
+    {
+        $filesystem = new Filesystem();
+        $dirs = $filesystem-> directories(public_path().'/images');
+        foreach ($dirs as $dir) {
+            $return[] = $filesystem->name($dir);
+        }
+        return $return;
     }
 
 }
