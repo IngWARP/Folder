@@ -20,7 +20,7 @@ $ composer require IngWARP/Folder
 In config/app add
 
 ``` php
-IngWARP\Folder\FolderServiceProvider::class,
+IngWARP\folder\FolderServiceProvider::class,
 ```
 
 ## Usage
