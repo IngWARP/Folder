@@ -25,14 +25,14 @@ class FolderServiceProvider extends ServiceProvider
         $this->setupRoutes($this->app->router);
 
         // use this if your package needs a config file
-        // $this->publishes([
-        //         __DIR__.'/config/config.php' => config_path('skeleton.php'),
-        // ]);
+        $this->publishes([
+            __DIR__.'/config/config.php' => config_path('folder.php'),
+        ]);
 
         // use the vendor configuration file as fallback
-        // $this->mergeConfigFrom(
-        //     __DIR__.'/config/config.php', 'skeleton'
-        // );
+        $this->mergeConfigFrom(
+            __DIR__.'/config/config.php', 'folder'
+        );
     }
     /**
      * Define the routes for the application.
@@ -46,7 +46,6 @@ class FolderServiceProvider extends ServiceProvider
         {
             require __DIR__.'/Http/routes.php';
         });
-            //dd($router);
     }
     /**
      * Register any package services.
@@ -58,9 +57,9 @@ class FolderServiceProvider extends ServiceProvider
         $this->registerFolder();
 
         // use this if your package has a config file
-        // config([
-        //         'config/skeleton.php',
-        // ]);
+        config([
+            'config/folder.php',
+        ]);
     }
     private function registerFolder()
     {
