@@ -26,12 +26,12 @@ class FolderServiceProvider extends ServiceProvider
 
         // use this if your package needs a config file
         $this->publishes([
-            __DIR__.'/config/config.php' => config_path('folder.php'),
+            __DIR__.'/config/folder.php' => config_path('folder.php'),
         ]);
 
         // use the vendor configuration file as fallback
         $this->mergeConfigFrom(
-            __DIR__.'/config/config.php', 'folder'
+            __DIR__.'/config/folder.php', 'folder'
         );
     }
     /**
