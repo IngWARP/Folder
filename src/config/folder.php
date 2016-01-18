@@ -26,5 +26,5 @@ return [
     | Where to start view files
     |
     */
-    'defaultFolder' => public_path() . '/image',
+    'defaultFolder' => public_path() . '/images',
 ];
