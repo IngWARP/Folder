@@ -8,8 +8,7 @@
  */
 
 use App\Http\Controllers\Controller;
-use Illuminate\Filesystem\Filesystem;
-use IngWARP\Folder\Http\DirTree;
+use IngWARP\folder\Http\DirTree;
 
 /**
  * Class folderController
@@ -19,11 +18,21 @@ class FolderController extends Controller
 {
     private $treeData;
 
+    /**
+     * Show the page
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         return view('folder::folder');
     }
 
+    /**
+     * API call to get JSON representation off the filetree
+     *
+     * @return string
+     */
     public function files()
     {
         $this->treeData = new DirTree(config('folder.defaultFolder'));

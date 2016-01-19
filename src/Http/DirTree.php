@@ -1,4 +1,4 @@
-<?php namespace packages\IngWARP\Folder\src\Http;
+<?php namespace IngWARP\Folder\Http;
 
 use Illuminate\Filesystem\Filesystem;
 
@@ -12,6 +12,10 @@ class DirTree implements \JsonSerializable
     private $name;
     private $filesystem;
 
+    /**
+     * DirTree constructor.
+     * @param $folderName
+     */
     public function __construct($folderName)
     {
         $this->filesystem = new Filesystem();
