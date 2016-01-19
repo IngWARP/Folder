@@ -29,6 +29,9 @@ class FolderServiceProvider extends ServiceProvider
             __DIR__.'/config/folder.php' => config_path('folder.php'),
         ]);
 
+        $this->publishes([
+            __DIR__.'/resources/assets/js' => public_path('js')
+        ]);
         // use the vendor configuration file as fallback
         $this->mergeConfigFrom(
             __DIR__.'/config/folder.php', 'folder'

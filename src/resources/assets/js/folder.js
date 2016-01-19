@@ -1,13 +1,5 @@
-// boot up the demo
-var demo = new Vue({
-    el: '#demo',
-    data: {
-        treeData: data
-    }
-})
-
 // demo data
-var data = {
+var startdata = {
     name: 'My Tree',
     children: [
         { name: 'hello' },
@@ -53,17 +45,7 @@ Vue.component('item', {
                 this.model.children.length
         }
     },
-    ready: function () {
-        this.getTree();
-    },
-
     methods: {
-        getTree: function () {
-            var self = this;
-            this.$http.post('api/files', self.alleles, function(data){
-                self.colors = data;
-            })
-        },
         toggle: function () {
             if (this.isFolder) {
                 this.open = !this.open
@@ -78,9 +60,30 @@ Vue.component('item', {
         },
         addChild: function () {
             this.model.children.push({
-                name: 'new stuff'
+                name: 'new stuff',
+                children: []
             })
         }
+    }
+})
+
+// boot up the demo
+var demo = new Vue({
+    el: '#demo',
+    data: {
+        treeData: startdata
+    },
+
+    ready: function () {
+        this.getTree();
+    },
+    methods: {
+        getTree: function () {
+            var self = this;
+            this.$http.get('api/files', self.alleles, function(data){
+                self.treeData = data;
+            })
+        },
     }
 })
 

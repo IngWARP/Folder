@@ -26,12 +26,8 @@
     <!-- item template -->
     <script type="text/x-template" id="item-template">
         <li>
-            <div
-                    :class="{bold: isFolder}"
-            @click="toggle"
-            @dblclick="changeType">
-            @{{model.name}}
-            <span v-if="isFolder"><i class="fa fa-folder-@{{open ? 'open-' : ''}}o"></i></span>
+            <div :class="{bold: isFolder}" @click="toggle" @dblclick="changeType">
+            <span v-if="isFolder"><i class="fa fa-folder-@{{open ? 'open-' : ''}}o"></i> @{{model.name}}</span>
             </div>
             <ul v-show="open" v-if="isFolder">
                 <item
@@ -53,7 +49,6 @@
                     class="item"
                     :model="treeData">
             </item>
-            @{{ $data | json }}
         </ul>
     </div>
 </div>
